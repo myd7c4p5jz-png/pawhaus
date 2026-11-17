@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawHaus | Premium Cat Houses & Trees | Phnom Penh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #1A1612;
+      --wood: #A67C52;
+      --gold: #C9A87C;
+      --cream: #FAF7F2;
+      --beige: #F0EBE3;
+      --text: #2F2A24;
+      --muted: #6B635A;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Outfit', sans-serif; color: var(--text); background: var(--cream); line-height: 1.7; font-weight: 400; }
+    h1, h2, h3, .logo-text { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+    header { background: rgba(250,247,242,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(166,124,82,0.15); position: sticky; top: 0; z-index: 100; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+    .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--dark); }
+    .logo img { height: 64px; border-radius: 8px; }
+    .logo-text { font-size: 1.8rem; letter-spacing: 0.5px; }
+    .logo-sub { font-size: 0.65rem; letter-spacing: 3px; color: var(--gold); font-family: 'Outfit', sans-serif; font-weight: 500; margin-top: 2px; }
+    nav ul { display: flex; list-style: none; gap: 36px; align-items: center; }
+    nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.92rem; letter-spacing: 0.5px; }
+    nav a:hover { color: var(--wood); }
+    .cta-btn { background: var(--dark); color: white !important; padding: 12px 26px; border-radius: 40px; font-weight: 500; }
+    .cta-btn:hover { background: var(--wood); }
+    .hero { padding: 100px 0 80px; text-align: center; background: linear-gradient(180deg, #FAF7F2 0%, #F0EBE3 100%); }
+    .hero h1 { font-size: 4.2rem; color: var(--dark); margin-bottom: 20px; line-height: 1.05; letter-spacing: -0.5px; }
+    .hero p.lead { font-size: 1.25rem; max-width: 680px; margin: 0 auto 40px; color: var(--muted); font-weight: 300; }
+    .badge { display: inline-block; border: 1px solid var(--gold); color: var(--wood); padding: 8px 20px; border-radius: 30px; font-size: 0.78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; }
+    .hero-btns { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+    .btn { padding: 16px 36px; border-radius: 40px; text-decoration: none; font-weight: 500; display: inline-block; letter-spacing: 0.5px; }
+    .btn-primary { background: var(--dark); color: white; }
+    .btn-secondary { background: transparent; border: 1.5px solid var(--dark); color: var(--dark); }
+    .btn:hover { transform: translateY(-2px); transition: 0.2s ease; }
+    section { padding: 90px 0; }
+    section h2 { text-align: center; font-size: 2.8rem; margin-bottom: 50px; color: var(--dark); }
+    .section-sub { text-align: center; max-width: 640px; margin: -30px auto 50px; color: var(--muted); font-weight: 300; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+    .feature-card { background: white; padding: 40px 28px; border-radius: 20px; text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
+    .feature-card h3 { margin: 18px 0 12px; font-size: 1.5rem; }
+    .icon { font-size: 2.2rem; }
+    .gallery-section { background: white; }
+    .design-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; }
+    .design-card { background: var(--cream); border-radius: 20px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.06); transition: all 0.3s ease; }
+    .design-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+    .design-card img { width: 100%; height: 300px; object-fit: cover; display: block; }
+    .design-info { padding: 24px; }
+    .design-info h3 { margin-bottom: 8px; font-size: 1.4rem; }
+    .design-info p { color: var(--muted); font-size: 0.95rem; }
+    .custom { background: var(--beige); }
+    .process { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 40px; margin-top: 40px; }
+    .step { text-align: center; max-width: 260px; }
+    .step-num { width: 56px; height: 56px; background: var(--dark); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; font-weight: 600; font-size: 1.2rem; }
+    .warranty-box { max-width: 820px; margin: 0 auto; background: white; padding: 50px; border-radius: 24px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+    .contact { background: var(--dark); color: white; text-align: center; }
+    .contact h2 { color: white; }
+    .contact p { color: #d0c8be; }
+    .contact-form { max-width: 520px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 16px; }
+    .contact-form input, .contact-form textarea, .contact-form select { padding: 16px; border-radius: 12px; border: none; font-family: inherit; background: rgba(255,255,255,0.95); }
+    .contact-form button { background: var(--gold); color: var(--dark); padding: 16px; border: none; border-radius: 40px; font-weight: 600; cursor: pointer; font-size: 1rem; letter-spacing: 0.5px; }
+    footer { background: #12100E; color: #888; text-align: center; padding: 40px 20px; font-size: 0.9rem; }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.8rem; }
+      nav ul { display: none; }
+      .logo-text { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <img src="imagine_images/EyWTY.jpg" alt="PawHaus Logo">
+          <div>
+            <div class="logo-text">PawHaus</div>
+            <div class="logo-sub">PREMIUM CAT FURNITURE</div>
+          </div>
+        </a>
+        <ul>
+          <li><a href="#designs">Collections</a></li>
+          <li><a href="#custom">Custom</a></li>
+          <li><a href="#warranty">Warranty</a></li>
+          <li><a href="#contact" class="cta-btn">Commission</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="badge">Built to Last • 2-Year Warranty & Repair</div>
+      <h1>PawHaus<br>Elevated Cat Living</h1>
+      <p class="lead">Solid wood. Thick natural sisal. Fully custom houses and trees — from compact hideouts to floor-to-ceiling structures. Crafted in Phnom Penh for cats that demand more, and owners who refuse disposable furniture.</p>
+      <div class="hero-btns">
+        <a href="#designs" class="btn btn-primary">View Collections</a>
+        <a href="#custom" class="btn btn-secondary">Design Your Own</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>The PawHaus Standard</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon">🪵</div>
+          <h3>Solid Wood Architecture</h3>
+          <p>Real timber frames and bases engineered for stability, multi-cat use, and years of climbing and jumping.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🧵</div>
+          <h3>Premium Sisal</h3>
+          <p>Thick natural sisal cats prefer. Designed so the wrapping can be renewed — the structure endures.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🛡️</div>
+          <h3>2-Year Repair & Warranty</h3>
+          <p>Structural warranty plus ongoing repair service. We re-wrap, reinforce, and maintain so it lasts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">✏️</div>
+          <h3>Fully Bespoke</h3>
+          <p>Compact houses to tall vertical systems. Sketch it, describe it, or adapt a design — we build it to your space.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="designs">
+    <div class="container">
+      <h2>Collections</h2>
+      <p class="section-sub">Starting points across scales. Every piece can be resized, reconfigured, or completely custom-drawn.</p>
+
+      <h3 style="text-align:center; margin: 60px 0 30px; font-size: 1.8rem;">Small Houses</h3>
+      <div class="design-grid">
+        <div class="design-card">
+          <img src="imagine_images/Q8ZPg.jpg" alt="Oak Hideout">
+          <div class="design-info">
+            <h3>Oak Hideout</h3>
+            <p>Compact cube with round entrance, cushion, and integrated short sisal post.</p>
+          </div>
+        </div>
+        <div class="design-card">
+          <img src="imagine_images/pJlhw.jpg" alt="Walnut Lounge">
+          <div class="design-info">
+            <h3>Walnut Lounge</h3>
+            <p>Dark walnut enclosed house with arched doorway and side sisal post.</p>
+          </div>
+        </div>
+        <div class="design-card">
+          <img src="imagine_images/zeWtj.jpg" alt="Scandi Box">
+          <div class="design-info">
+            <h3>Scandi Box</h3>
+            <p>Clean light-wood cube with arched entrance and integrated sisal panel.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="text-align:center; margin: 70px 0 30px; font-size: 1.8rem;">Medium Houses</h3>
+      <div class="design-grid">
+        <div class="design-card">
+          <img src="imagine_images/8p6Zg.jpg" alt="Oak Two-Level">
+          <div class="design-info">
+            <h3>Oak Two-Level</h3>
+            <p>Spacious lower hideout with upper platforms and dual sisal posts.</p>
+          </div>
+        </div>
+        <div class="design-card">
+          <img src="imagine_images/7VFGK.jpg" alt="Walnut with Hammock">
+          <div class="design-info">
+            <h3>Walnut Estate</h3>
+            <p>Dual hideouts, upper lounge, and fabric hammock between sisal columns.</p>
+          </div>
+        </div>
+        <div class="design-card">
+          <img src="imagine_images/jf5sf.jpg" alt="Base House Platforms">
+          <div class="design-info">
+            <h3>Base House + Platforms</h3>
+            <p>Large enclosed foundation with elevated platforms linked by thick sisal.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="text-align:center; margin: 70px 0 30px; font-size: 1.8rem;">Tall & Floor-to-Ceiling</h3>
+      <div class="design-grid">
+        <div class="design-card">
+          <img src="imagine_images/l7Fy5.jpg" alt="Oak Sky Tower">
+          <div class="design-info">
+            <h3>Oak Sky Tower</h3>
+            <p>Near full-height light oak with staggered platforms and multiple hideouts.</p>
+          </div>
+        </div>
+        <div class="design-card">
+          <img src="imagine_images/LzbEY.jpg" alt="Walnut Vertical Estate">
+          <div class="design-info">
+            <h3>Walnut Vertical Estate</h3>
+            <p>Dense multi-level tower with platforms, hideouts, and hammocks.</p>
+          </div>
+        </div>
+        <div class="design-card">
+          <img src="imagine_images/RINP8.jpg" alt="Wall Climber System">
+          <div class="design-info">
+            <h3>Wall Climber System</h3>
+            <p>Space-efficient wall layout maximizing vertical territory with floating shelves and posts.</p>
+          </div>
+        </div>
+        <div class="design-card">
+          <img src="imagine_images/r3ZdU.jpg" alt="Multi-Condo Tower">
+          <div class="design-info">
+            <h3>Multi-Condo Tower</h3>
+            <p>Large base with stacked upper condos and platforms for multi-cat homes.</p>
+          </div>
+        </div>
+        <div class="design-card">
+          <img src="imagine_images/dDzt0.jpg" alt="Minimalist Tall Oak">
+          <div class="design-info">
+            <h3>Minimalist Tall Oak</h3>
+            <p>Clean high-reaching design with open platforms and enclosed cubbies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="custom" id="custom">
+    <div class="container">
+      <h2>Completely Bespoke</h2>
+      <p class="section-sub">From a compact single-cat house to a floor-to-ceiling vertical landscape. Draw it, describe the space, or start from a collection piece.</p>
+      <div class="process">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Share Your Vision</h3>
+          <p>Sketch, room dimensions, number of cats, preferred materials and finishes.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Design & Quote</h3>
+          <p>We refine the concept, confirm solid wood and sisal specifications, and provide a clear quote.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Crafted & Delivered</h3>
+          <p>Hand-built in Phnom Penh. Delivery and placement available. Warranty begins on delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="warranty">
+    <div class="container">
+      <h2>2-Year Repair & Warranty</h2>
+      <div class="warranty-box">
+        <h3 style="margin-bottom:18px; font-size: 1.8rem;">Built to Endure — Maintained by Us</h3>
+        <p>Every PawHaus piece carries a <strong>2-year structural warranty</strong> on the wood frame, joints, and base against manufacturing defects under normal use.</p>
+        <p style="margin:18px 0;">Our <strong>repair service</strong> keeps it performing: we re-wrap worn sisal, replace platforms or cushions, and reinforce as needed. The architecture is designed to outlast the wrapping — we ensure it does.</p>
+        <p>One investment. Years of elevated living for your cats.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Commission Your PawHaus</h2>
+      <p>Tell us about your cats, your space, and your idea. We’ll respond with refined options and a quote.</p>
+      <form class="contact-form" action="mailto:orders@pawhaus.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone / Telegram (optional)">
+        <select name="interest">
+          <option value="">Interested in...</option>
+          <option>Small House</option>
+          <option>Medium House / Tree</option>
+          <option>Tall / Floor-to-Ceiling</option>
+          <option>Wall System</option>
+          <option>Fully Custom / Sketch</option>
+        </select>
+        <textarea name="message" rows="5" placeholder="Describe your cats, space, ceiling height, or attach a sketch idea..."></textarea>
+        <button type="submit">Send Inquiry</button>
+      </form>
+      <p style="margin-top:30px; font-size:0.95rem;">Phnom Penh • Local craftsmanship • Delivery available</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 PawHaus • Premium Cat Furniture • Phnom Penh, Cambodia</p>
+    <p style="margin-top:10px;">Solid wood. Thick sisal. 2-year repair & warranty. Built to last.</p>
+  </footer>
+</body>
+</html>
